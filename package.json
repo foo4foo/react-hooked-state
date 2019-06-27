@@ -1,0 +1,48 @@
+{
+  "name": "react-hooked-state",
+  "version": "1.0.0",
+  "description": "Simple state for React. With hooks support.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foo4foo/react-hooked-state.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "reactive",
+    "functional-reactive-programming",
+    "state management",
+    "state",
+    "observable",
+    "global-state",
+    "react-hooks",
+    "hooks"
+  ],
+  "author": "foo4foo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/foo4foo/react-hooked-state/issues"
+  },
+  "homepage": "https://github.com/foo4foo/react-hooked-state#readme",
+  "dependencies": {
+    "rxjs": "^6.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.2",
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0",
+    "jest-dom": "^3.5.0",
+    "prettier": "^1.18.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-test-renderer": "^16.8.6",
+    "react-testing-library": "^8.0.1"
+  }
+}
