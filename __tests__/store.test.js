@@ -1,30 +1,19 @@
-import { createStore } from "../src/store";
-
-const initialState = {
-  randomValue: "something",
-  persons: [
-    {
-      id: 1,
-      name: "John",
-      lastName: "Doe"
-    },
-    {
-      id: 2,
-      name: "Jon",
-      lastName: "Doe"
-    }
-  ]
-};
+import { initialState } from "../fixtures/mockStore";
+import { createStore } from "../src";
 
 let store = null;
 
 describe("Store test", () => {
   beforeAll(() => {
-    store = createStore(initialState).store;
+    store = createStore(initialState);
   });
 
   it("creates store instance", () => {
     expect(store).not.toBe(undefined);
-    expect(store.getValue()).toEqual(initialState);
+    expect(store.store.getValue()).toEqual(initialState);
+  });
+
+  it("contains persons list", () => {
+    expect(store.store.getValue().persons).toEqual(initialState.persons);
   });
 });
