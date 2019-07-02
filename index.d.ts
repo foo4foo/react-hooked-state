@@ -6,7 +6,7 @@ declare module 'react-hooked-state' {
     }
     
     export interface Store {
-        store: BehaviorSubject,
+        store: BehaviorSubject<IState>,
         middlewares: any[]
     }
 

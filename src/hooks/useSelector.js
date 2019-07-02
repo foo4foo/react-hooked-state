@@ -1,5 +1,5 @@
-import { useState, useRef, useEffect, useContext } from "react";
-import { StoreContext } from "../store/storeContext";
+import { useState, useRef, useEffect, useContext } from 'react';
+import StoreContext from '../store/storeContext';
 
 const refEquality = (a, b) => a === b;
 
@@ -14,8 +14,8 @@ function useSelector(selectorFunction, equalityFunction = refEquality) {
   const [state, setState] = useState(selectedState);
 
   useEffect(() => {
-    const subscription = store.subscribe(state => {
-      const newSelectedState = selectorFunction(state);
+    const subscription = store.subscribe(globalState => {
+      const newSelectedState = selectorFunction(globalState);
 
       if (!equalityFunction(newSelectedState, latestSelectedState.current)) {
         setState(newSelectedState);

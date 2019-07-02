@@ -6,7 +6,14 @@
   "types": "index.d.ts",
   "scripts": {
     "test": "jest",
-    "build": "webpack"
+    "build": "webpack",
+    "lint": "eslint src/**/*.js __tests__/**/*.js",
+    "prettier": "prettier --trailing-comma es5 --write src/**/*.js __tests__/**/*.js fixtures/**/*.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn prettier && yarn lint && yarn test"
+    }
   },
   "repository": {
     "type": "git",
@@ -31,6 +38,7 @@
   },
   "homepage": "https://github.com/foo4foo/react-hooked-state#readme",
   "dependencies": {
+    "prop-types": "^15.7.2",
     "rxjs": "^6.5.2"
   },
   "peerDependencies": {
@@ -48,6 +56,13 @@
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "husky": "^3.0.0",
     "jest": "^24.8.0",
     "jest-dom": "^3.5.0",
     "prettier": "^1.18.2",

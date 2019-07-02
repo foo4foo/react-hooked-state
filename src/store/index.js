@@ -1,10 +1,8 @@
-import { BehaviorSubject } from "rxjs";
+import { BehaviorSubject } from 'rxjs';
 
-function createStore(initialState = {}, middlewares = []) {
+export default function createStore(initialState = {}, middlewares = []) {
   return {
     store: new BehaviorSubject(initialState),
-    middlewares
+    middlewares,
   };
 }
-
-export { createStore };

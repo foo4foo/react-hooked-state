@@ -1,0 +1,21 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": ["airbnb"],
+  "rules": {
+    "indent": [2, 2],
+    "no-tabs": "off",
+    "comma-dangle": "off",
+    "arrow-parens": "off",
+    "object-curly-newline": [
+      "error",
+      {
+        "ImportDeclaration": "never"
+      }
+    ]
+  }
+}
