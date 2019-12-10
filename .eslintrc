@@ -11,6 +11,7 @@
     "no-tabs": "off",
     "comma-dangle": "off",
     "arrow-parens": "off",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
     "object-curly-newline": [
       "error",
       {
